@@ -37,6 +37,9 @@ void merge(int *arr, int start, int end)
         arr[mainidx++] = arr1[idx1++];
     while (idx2 < size2)
         arr[mainidx++] = arr2[idx2++];
+    // freeing the memory after usage
+    delete[] arr1;
+    delete[] arr2;
 }
 void mergesort(int *arr, int start, int end)
 {
